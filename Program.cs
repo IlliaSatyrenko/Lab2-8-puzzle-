@@ -321,8 +321,6 @@ namespace SearchMethods
                         non.Add(successors[0].state.numbers);
                     }
 
-                    var h = state.IsSolvable();
-
                     if (max.Contains(successors[0].state.numbers))
                     {
                         max.Remove(successors[0].state.numbers);
@@ -565,7 +563,7 @@ namespace SearchMethods
                     }
                     Console.WriteLine("iterations: " + ldfsPath.Item2);
                     //Console.WriteLine("nodes in mem: " + ldfsPath.Item4);
-                    Console.WriteLine("nodes in mem: " + (ldfsPath.Item1.Count + 1));
+                    Console.WriteLine("nodes in mem: " + ldfsPath.Item1.Count + 1);
                     Console.WriteLine("deadend: " + ldfsPath.Item3);
                     Console.WriteLine("nodes: " + ldfsPath.Item5);
                     Console.Write("\n");
