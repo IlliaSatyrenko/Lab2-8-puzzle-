@@ -156,6 +156,12 @@ namespace SearchMethods
             int counter = 0;
             int non = 0;
 
+            if (!new State(state).IsSolvable())
+            {
+                Console.WriteLine("Is not solvable");
+                return (correctPath, 0, 0, 0, 0);
+            }
+
             correctPath = LDFS(new LDFSState(state, null), limit, correctPath, ref counter, ref non);
 
             return (correctPath, counter, non, limit, counter);
@@ -250,6 +256,12 @@ namespace SearchMethods
             List<byte[]> max = new List<byte[]>();
             List<byte[]> non = new List<byte[]>();
             List<byte[]> allStates = new List<byte[]>();
+
+            if (!new State(state).IsSolvable())
+            {
+                Console.WriteLine("Is not solvable");
+                return (correctPath, 0, 0, 0, 0);
+            }
 
             correctPath = RBFS(new RBFSState(state, null, 0), int.MaxValue, correctPath, ref counter, ref max, ref non, ref allStates).path;
 
