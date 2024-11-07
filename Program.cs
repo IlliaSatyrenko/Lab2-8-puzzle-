@@ -517,7 +517,7 @@ namespace SearchMethods
                 }
                 Console.WriteLine("iterations: " + rbfsPath.Item2);
                 //Console.WriteLine("nodes in mem: " + rbfsPath.Item3);
-                Console.WriteLine("nodes in mem: " + rbfsPath.Item1.Count + 1);
+                Console.WriteLine("nodes in mem: " + (rbfsPath.Item1.Count + 1));
                 Console.WriteLine("deadend: " + rbfsPath.Item4);
                 Console.WriteLine("nodes: " + rbfsPath.Item5);
                 Console.Write("\n");
@@ -565,7 +565,7 @@ namespace SearchMethods
                     }
                     Console.WriteLine("iterations: " + ldfsPath.Item2);
                     //Console.WriteLine("nodes in mem: " + ldfsPath.Item4);
-                    Console.WriteLine("nodes in mem: " + ldfsPath.Item1.Count + 1);
+                    Console.WriteLine("nodes in mem: " + (ldfsPath.Item1.Count + 1));
                     Console.WriteLine("deadend: " + ldfsPath.Item3);
                     Console.WriteLine("nodes: " + ldfsPath.Item5);
                     Console.Write("\n");
